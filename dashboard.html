@@ -1,0 +1,129 @@
+<?php session_start(); 
+ if(!isset($_SESSION['user'])) { 
+    header('Location: login.php');
+    exit();		
+    }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+
+    <title>Dashboard | CORE Commertial Construction</title>
+
+</head>
+<body>
+    <!-- Header Area -->
+<div id="header">
+
+    <!-- Top Bar Begins-->
+    
+    <div class="top_bar">
+        <a class="top_links" id="head_login_btn" href="dashboard.php"><img src="../images/fa/svgs/regular/circle-user.svg" > Client Area</a>
+        <!-- <a class="top_links" href="#"><img src="../images/fa/svgs/regular/address-book.svg" > Resources</a> -->
+        <a class="top_links" href="aboutus.html"><img src="../images/fa/svgs/regular/flag.svg" > About Us</a>
+    
+        <button class="top_contact" onclick="location.href='tel:+1-202-555-0116'" type="button">Call us: +91 8888753948</button>
+        <button class="top_contact" onclick="location.href='mailto:support@cms.net'" type="button">Email: abhisonwane8888@gmail.com</button>
+        
+        <div class="search_container">
+            <form action="https://www.google.com/search" target="_blank">
+                <input id="top_search" type="text" placeholder="Type something.." name="q">
+                <button type="submit">Search</button>
+            </form>
+        </div>      
+    </div>
+    <!-- End of Top bar -->
+    
+    
+    
+    
+    <!-- Main Navigation Begins-->
+    
+    <div class="main_nav">
+        <a href="index.php">
+            <img id="logo" width="200px" src="../images/logoheader45.png" >
+        </a>
+        <nav id="main_nav">
+            <a class="nav_links" id="index" href="index.html">Home</a>
+            <a class="nav_links" id="features" href="features.html">Features</a>
+            <a class="nav_links" id="testimonials" href="testimonials.html">Testimoials</a>
+            <a class="nav_links" id="integrations" href="integrations.html">Integrations</a>
+            <a class="nav_links" id="contact" href="contact.html">Contact</a>
+            <!-- <button id="demo" onclick="location.href='demo.php'">Book a demo</button> -->
+        </nav>
+    </div>
+    <script src="../js/main_nav.js"></script>
+    
+    <!--End of Main Navigation -->
+    
+    </div>
+    
+    <!-- End of header area -->
+    </body>
+    </html>
+    
+    <!-- 
+        Student name: D.D.K.S. Dias
+        Student ID: IT21220760
+        Module: IWT (1st Yr: 2nd Sem: Final Assignment: 2022)
+     -->
+    <div class="dash_container">
+        <div class="db_panel">
+            <div class="mini_profile">
+                <img id="ds_profile" src="../images/fa/svgs/regular/user.svg" alt="">
+                <div style="float:right; margin:20px 18px 0 5px">
+                    <a href="mailto:support@cms.net" class="ds_mini_btn">Verify Account</a><br> 
+                    <a href="logout.php" class="ds_mini_btn">Log out</a>
+                </div>
+            </div>
+            <a href="dashboard.php"><h3 class="side_menu">Account Summery</h3></a>
+            <a href="#"><h3 class="side_menu">Available Downloads</h3></a>
+            <a href="#"><h3 class="side_menu">Live Support</h3></a>
+            <a href="dashboard_update.php"><h3 class="side_menu">Edit Profile</h3></a>
+            <a href="#"><h3 class="side_menu">Purchase History</h3></a>
+            <a href="#"><h3 class="side_menu">Payment Details</h3></a>
+
+
+        </div>
+        <div class="db_pan">
+                
+                <br>
+                <fieldset>
+                    <legend><h3 class="dash_greeting">Profile Summery:</h3></legend>
+                    <ul>                        
+                     
+
+
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend><h3 class="dash_greeting">Recommendations:</h3></legend>
+                    <ul>
+                        <li><h4 class="dash_greeting">Check Download section for new updates.</h4></li>
+                        <li><h4 class="dash_greeting">Setup multifactor authentication.</h4></li>
+                        <li><h4 class="dash_greeting">Add a secondary payments method.</h4></li>
+                        <li><h4 class="dash_greeting">Review payment summery.</h4></li>
+
+                    </ul>
+                </fieldset>
+                
+        </div>
+    </div>
+    <?php
+    include('footer.php'); //linking to footer section
+    ?>
+
+
+
+<!-- 
+    Student name: D.D.K.S. Dias
+    Student ID: IT21220760
+    Module: IWT (1st Yr: 2nd Sem: Final Assignment: 2022)
+ -->
